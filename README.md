@@ -1,6 +1,6 @@
 # Note by Naohiro2g
 
-This is a fork of the original Color Tower Defense game written in Python 2 and Pygame. I used pyenv and virtualenv to set up the Python 2.7.18 and pygame 1.9.2 environments. I also created a bash script to remove warnings around libpng. The script is named [`.remove_iccp.sh`](. /.remove_iccp.sh) in the root directory of this project. By the way, the png files have already been processed, so you don't need to use it, and the script is for your reference only. The script requires `pngcrush` to be installed.
+This is a fork of the original Color Tower Defense game written in Python 2 and Pygame. I used pyenv and virtualenv to set up the Python 2.7.18 and pygame 1.9.2 environments. I also created a bash script to remove warnings around libpng. The script is named [`.remove_iccp.sh`](./.remove_iccp.sh) in the root directory of this project. By the way, the png files have already been processed, so you don't need to use it, and the script is for your reference only. The script requires `pngcrush` to be installed.
 
 Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv directory using virtualenv. It is not included in this repository.
 
