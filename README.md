@@ -1,8 +1,18 @@
 # Note by Naohiro2g
 
-This is a fork of the original Color Tower Defense game written in Python 2 and Pygame. I used pyenv and virtualenv to set up the Python 2.7.18 and pygame 1.9.2 environments. I also created a bash script to remove warnings around libpng. The script is named [`.remove_iccp.sh`](./.remove_iccp.sh) in the root directory of this project. By the way, the png files have already been processed, so you don't need to use it, and the script is for your reference only. The script requires `pngcrush` to be installed.
+This is a fork of the original Color Tower Defense game written in Python 2 and Pygame. I used pyenv and virtualenv to set up the Python 2.7.18 and pygame 1.9.2 environments.
 
-Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv directory using virtualenv. It is not included in this repository.
+I also created a bash script to remove following warnings around libpng. `libpng warning: iCCP: known incorrect sRGB profile` The script is named [`.remove_iccp.sh`](./.remove_iccp.sh) in the root directory of this project. By the way, the png files have already been processed, so you don't need to use it, and the script is for your reference only. The script requires `pngcrush` to be installed.
+
+Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv directory using virtualenv. You have to recreate the .venv because it is not included in this repository.
+
+I saw the following warnings at the game over scene or others, but they were not easy to be reproduced.
+`libpng warning: Interlace handling should be turned on when using png_read_image`
+
+Just to be safe, I removed the interlaced flag from the png files using the following command line.
+```
+magick mogrify -interlace none Resources/Images/**/*/*.png
+```
 
 ## How to set up the environment and run the game
 
@@ -22,13 +32,11 @@ Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv
     # Run the game.
     $ python Color\ Tower\ Defense.py
 
-## One big hint to play the game
+## One big hint at playing the game
 
-You need to click the "NEXT WAVE" at the up-right to start the enemy's attack wave after you placed initial defence towers. The game will not start automatically.
+You need to click the "NEXT WAVE" at the up-right to start the enemy's attack wave after you placed the initial defence towers. Otherwise, the game will not start. According to the original README, you can use the spacebar or ESC key to start the wave, but it does not work in my environment for some reason. Other hotkeys are working fine, though.
 
 ## The original README is below
-
-========================
 
 Color Tower Defense is a game where you must use unique towers to defend off the waves of invading enemies.
 
@@ -40,13 +48,13 @@ The more difficult levels require quick placement and selling of towers in order
 
 Hotkeys:
 
-B - enter build tower mode
-Right click - exit build tower mode
-Spacebar, ESC - exit build tower mode
-Spacebar, ESC(again) - starts new wave
-1, 2, 3 - upgrade selected tower
-S, 4 - sell selected tower
-P - pause game
+- B - enter build tower mode
+- Right click - exit build tower mode
+- Spacebar, ESC - exit build tower mode
+- Spacebar, ESC(again) - starts new wave
+- 1, 2, 3 - upgrade selected tower
+- S, 4 - sell selected tower
+- P - pause game
 
 the source download runs on mac and windows
 
