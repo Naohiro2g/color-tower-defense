@@ -31,9 +31,10 @@ magick mogrify -interlace none Resources/Images/**/*/*.png
     # Run the game.
     $ python Color\ Tower\ Defense.py
 
-## One big hint at playing the game
+## One big bug at the hot key
 
-You need to click the "NEXT WAVE" at the up-right to start the enemy's attack wave after you placed the initial defence towers. Otherwise, the game will not start. According to the original README, you can use the spacebar or ESC key to start the wave, but it does not work in my environment for some reason. Other hotkeys are working fine, though.
+I found a bug in the original README about the hot key for starting a new wave. The hot key is actually N, not Spacebar or ESC.
+Clicking the "NEW WAVE" at the top-right works fine.
 
 ## The original README is below
 
@@ -50,7 +51,7 @@ Hotkeys:
 - B - enter build tower mode
 - Right click - exit build tower mode
 - Spacebar, ESC - exit build tower mode
-- Spacebar, ESC(again) - starts new wave
+- N - starts new wave
 - 1, 2, 3 - upgrade selected tower
 - S, 4 - sell selected tower
 - P - pause game
