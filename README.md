@@ -5,6 +5,7 @@ This is a fork of the original Color Tower Defense game written in Python 2 and 
 Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv directory using virtualenv. It is not included in this repository.
 
 ## How to set up the environment and run the game
+
     # If you don't have Python 2.7.18 installed by pyenv.
     $ pyenv install 2.7.18
     # If you don't have virtualenv installed for Python 2.7.18.
@@ -25,7 +26,7 @@ Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv
 
 You need to click the "NEXT WAVE" at the up-right to start the enemy's attack wave after you placed initial defence towers. The game will not start automatically.
 
-## The original README is below.
+## The original README is below
 
 ========================
 
