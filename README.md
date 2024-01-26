@@ -11,7 +11,7 @@ Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv
     # If you don't have virtualenv installed for Python 2.7.18.
     $ pip install virtualenv
 
-    # Below is the commands to be used in the project directory.
+    # Below are the command lines to be used in the project directory.
     $ pyenv local 2.7.18
     $ virtualenv .venv
     $ source .venv/Scripts/activate
