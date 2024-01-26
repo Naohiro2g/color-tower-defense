@@ -22,11 +22,10 @@ magick mogrify -interlace none Resources/Images/**/*/*.png
     $ pip install virtualenv
 
     # Below are the command lines to be used in the project directory.
-    $ pyenv local 2.7.18
     $ virtualenv .venv
     $ source .venv/Scripts/activate
 
-    # In the virtual environment.
+    # In the virtual environment;
     $ pip install pygame==1.9.2
 
     # Run the game.
