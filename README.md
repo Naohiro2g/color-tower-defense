@@ -2,9 +2,13 @@
 
 This is a fork of the original Color Tower Defense game written in Python 2 and Pygame. I used pyenv and virtualenv to set up the Python 2.7.18 and pygame 1.9.2 environments.
 
+**You can play the game without virtualenv, and it is relatively safe because the game uses only pygame and sys modules. Please choose one of the following two ways to set up the environment.**
+
+[<img src="https://drive.google.com/file/d/1nUvGR2GY-4z7Op0jbd-CooXxh4OVlGxv/view?usp=drive_link" width="400">](https://drive.google.com/file/d/1P8P-qYTrn3bbCNz_u9wuoNhen34qgOke/view?usp=drive_link)
+
 I also created a bash script to remove following warnings around libpng. `libpng warning: iCCP: known incorrect sRGB profile` The script is named [`.remove_iccp.sh`](./.remove_iccp.sh) in the root directory of this project. By the way, the png files have already been processed, so you don't need to use it, and the script is for your reference only. The script requires `pngcrush` to be installed.
 
-Since neither PDM nor poetry is compatible with Python 2.7.18, I created a .venv directory using virtualenv. You have to recreate the .venv because it is not included in this repository.
+Since neither PDM nor poetry is compatible with Python 2.7.18, I created a ```.venv``` directory using virtualenv. You have to recreate the ```.venv``` because it is not included in this repository.
 
 I saw the following warnings at the game over scene or others, but they were not easy to be reproduced.
 `libpng warning: Interlace handling should be turned on when using png_read_image`
@@ -14,22 +18,38 @@ Just to be safe, I removed the interlaced flag from the png files using the foll
 magick mogrify -interlace none Resources/Images/**/*/*.png
 ```
 
-## How to set up the environment and run the game
+## How to set up the environment without virtualenv
 
+```bash
     # If you don't have Python 2.7.18 installed by pyenv.
-    $ pyenv install 2.7.18
+    pyenv install 2.7.18
+
+    # for Python 2.7.18 installed by pyenv.
+    pip install pygame==1.9.2
+```
+
+
+## How to set up the environment with virtualenv
+
+```bash
+    # If you don't have Python 2.7.18 installed by pyenv.
+    pyenv install 2.7.18
     # If you don't have virtualenv installed for Python 2.7.18.
-    $ pip install virtualenv
+    pip install virtualenv
 
     # Below are the command lines to be used in the project directory.
-    $ virtualenv .venv
-    $ source .venv/Scripts/activate
+    virtualenv .venv
+    source .venv/Scripts/activate
 
     # In the virtual environment;
-    $ pip install pygame==1.9.2
+    pip install pygame==1.9.2
+```
 
-    # Run the game.
-    $ python Color\ Tower\ Defense.py
+## How to run the game
+
+```bash
+    python Color\ Tower\ Defense.py
+```
 
 ## One big bug at the hot key
 
