@@ -4,7 +4,7 @@ This is a fork of the original Color Tower Defense game written in Python 2 and 
 
 **You can play the game without virtualenv, and it is relatively safe because the game uses only pygame and sys modules. Please choose one of the following two ways to set up the environment.**
 
-[<img src="https://drive.google.com/file/d/1nUvGR2GY-4z7Op0jbd-CooXxh4OVlGxv/view?usp=drive_link" width="400">](https://drive.google.com/file/d/1P8P-qYTrn3bbCNz_u9wuoNhen34qgOke/view?usp=drive_link)
+[<img src="./color_tower_defence.png" width="400">](https://drive.google.com/file/d/1P8P-qYTrn3bbCNz_u9wuoNhen34qgOke/view?usp=drive_link)
 
 I also created a bash script to remove following warnings around libpng. `libpng warning: iCCP: known incorrect sRGB profile` The script is named [`.remove_iccp.sh`](./.remove_iccp.sh) in the root directory of this project. By the way, the png files have already been processed, so you don't need to use it, and the script is for your reference only. The script requires `pngcrush` to be installed.
 
